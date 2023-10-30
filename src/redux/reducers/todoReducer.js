@@ -1,6 +1,6 @@
 const initialState = {
     todos: [
-      { id: 1, title: "Buy Milk", isDone: true },
+      { id: 1, title: "Buy Milk", isDone: false },
       { id: 2, title: "Buy Egg", isDone: true },
       { id: 3, title: "Buy T-Shirt", isDone: false },
     ],

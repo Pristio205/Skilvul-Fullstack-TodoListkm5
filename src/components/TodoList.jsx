@@ -30,6 +30,10 @@ function TodoList() {
   };
 
   const handleRemove = (id) => {
+    const todoToRemove = todos.find((todo) => todo.id === id);
+    if (!todoToRemove.isDone) {
+      dispatch(removeTodo(id));
+    }
     dispatch(removeTodo(id));
   };
 
@@ -98,15 +102,19 @@ function TodoList() {
             />
             <span>{item.title}</span>
             <div className="buttons">
+            {!item.isDone && (
               <button
                 className="edit-button"
                 onClick={() => handleEdit(item.id, prompt('Enter new text:'))}
               >
                 <FontAwesomeIcon icon={faEdit} />
               </button>
+            )}
+            {!item.isDone && (
               <button className="remove-button" onClick={() => handleRemove(item.id)}>
                 <FontAwesomeIcon icon={faTrash} />
               </button>
+            )}
             </div>
           </li>
         ))}
