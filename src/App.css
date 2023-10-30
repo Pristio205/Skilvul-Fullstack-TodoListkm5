@@ -1,0 +1,120 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.todo-container {
+  width: 370px;
+  margin: 100px auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.title h1 {
+  width: 100%;
+  font-size: 32px;
+  color: #293845;
+  font-weight: bolder;
+}
+
+.add-container {
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.add-container input{
+  border: 2px solid #dee3e8;
+  padding: 8px 32px 8px 5px;
+  border-radius: 5px;
+  width: 250px;
+  color: black;
+  margin-right: 15px;
+}
+
+
+.add-button {
+  background-color: #6558f5;
+  color: white;
+  font-weight: 500;
+  padding: 8px 20px 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-buttons {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.filter-buttons button {
+  font-size: 10px;
+  margin: 10px;
+  padding: 8px 16px;
+  border-radius: 100px 100px 100px 100px;
+  border: none;
+  background-color:  #302d2d88;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  font-weight: bold;
+  background-color: #107c8fd3;
+}
+
+.todo-list {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background-color: #f8f8f8;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+ 
+}
+
+.todo-list li:last-child {
+  border: 1px solid #000000;
+}
+
+.todo-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-list li input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-list li .buttons {
+  margin-left: auto;
+}
+
+.todo-list li .buttons button {
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: #3f51b5;
+  cursor: pointer;
+}
+
+.todo-list li .buttons .edit-button {
+  margin-right: 10px;
+}
+
+.todo-list li .buttons .remove-button {
+  color: #ff1744;
+}
